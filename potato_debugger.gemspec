@@ -2,10 +2,10 @@
 
 $:.push File.expand_path("../lib", __FILE__)
 
-require_relative 'lib/potato_debugger/verion'
+require_relative 'lib/potato_debugger/version'
 
 Gem::Specification.new do |s|
-  s.name = "PotatoDebugger"
+  s.name = "potato_debugger"
   s.version = PotatoDebugger::VERSION
 
   s.required_ruby_version = '>= 2.7'

@@ -6,4 +6,4 @@
 
 $0 = 'potato_debugger'
 
-require 'init'
+require_relative '../scratch'

@@ -1,12 +1,14 @@
-require_relative '../debugger'
+require_relative '../potato_debugger'
 require "awesome_print"
+require "pry"
 
 module PotatoDebugger
   class Hook
     include PotatoDebugger
 
+    attr_accessor :options
 
-    def initialize(klass, *args)
+    def initialize(klass, **args)
       @cache = {}
       @class = klass
       @overview ||= []
@@ -25,7 +27,7 @@ module PotatoDebugger
 
 
         HookHelper.define_method(method_name) do |value|
-          log(value, attribute.to_sym, send(attribute), __method__)
+          log(value, attribute.to_sym, send(attribute), __method__, pry: @debugger_instance.options)
         end
 
         klass.define_singleton_method("tracked") { |key, *opts|

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# (C)Samue O'Donnell
+# MIT license
+
+$0 = 'potato_debugger'
+
+require_relative '../lib/potato_debugger'

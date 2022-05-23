@@ -1,4 +1,4 @@
-require_relative 'lib/hooks'
+require_relative '../potato_debugger/hooks.rb'
 require "awesome_print"
 require 'time'
 
@@ -13,7 +13,7 @@ module PotatoDebugger
 
   private
 
-    def log(value, key, original_value, calling_method)
+    def log(value, key, original_value, calling_method, pry: false)
       @debugger_instance.overview << "#{self.name}.name assigned new value #{value} by #{__method__} in #{self.class}"
       @debugger_instance.cache[key] << {
         value_before: original_value,
@@ -22,6 +22,15 @@ module PotatoDebugger
         _calling_method: calling_method,
         stack_trace: caller[-2]
       }
+
+      if pry
+        ap @debugger_instance.cache[key]
+        begin
+          binding.pry
+        rescue
+          binding.irb
+        end
+      end
     end
   end
 end

@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
-require File.expand_path('../lib/version', __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
+
+require_relative 'lib/potato_debugger/verion'
 
 Gem::Specification.new do |s|
-  s.name = "Potato Debugger"
+  s.name = "PotatoDebugger"
   s.version = PotatoDebugger::VERSION
 
   s.required_ruby_version = '>= 2.7'
@@ -26,7 +28,7 @@ DESC
   s.homepage = "https://github.com/PotatoBaron89/PotatoBaronDebugger"
   s.licenses = ["MIT"]
 
-  s.executables = ["init"]
+  s.executables = ["debugger"]
   s.require_paths = ["lib"]
   s.files = `git ls-files bin lib *.md LICENSE`.split("\n")
 

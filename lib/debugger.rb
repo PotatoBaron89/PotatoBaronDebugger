@@ -1,7 +1,6 @@
 require_relative 'lib/hooks'
 require "awesome_print"
 require 'time'
-require 'pry'
 
 module PotatoDebugger
   module HookHelper

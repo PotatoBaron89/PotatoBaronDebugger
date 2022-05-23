@@ -13,22 +13,22 @@ Gem::Specification.new do |s|
   ]
 
   s.email = [
-    "samboy29@gmail.com"
+    ""
   ]
 
-  s.summary = "A super early prototype of a debugging tool for Ruby."
+  s.summary = "A super early prototype of a debugging tool for Ruby. Not worth using yet."
 
   s.description = <<DESC
 An extremely early build for a Ruby Debugging tool, designed to be able to hook into various
 classes and track changes.  Not intended to be used by others at this stage.
 DESC
 
-  s.homepage = ""
+  s.homepage = "https://github.com/PotatoBaron89/PotatoBaronDebugger"
   s.licenses = ["MIT"]
 
   s.executables = ["init"]
   s.require_paths = ["lib"]
-  s.files = ''
+  s.files = `git ls-files bin lib *.md LICENSE`.split("\n")
 
-
+  s.metadata['changelog_uri'] = 'https://github.com/PotatoBaron89/PotatoBaronDebugger/blob/masterCHANGELOG.md'
 end

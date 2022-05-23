@@ -35,8 +35,6 @@ module PotatoDebugger
           if opts.empty?
             ap @debugger_instance.cache[key]
           else
-            binding.pry
-
             ap @debugger_instance.cache[key].filter do |e|
               options.key? e
             end

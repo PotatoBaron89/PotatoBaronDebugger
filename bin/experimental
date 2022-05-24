@@ -4,6 +4,6 @@
 # (C)Samuel O'Donnell
 # MIT license
 
-$0 = 'potato_debugger'
+$0 = 'potato_debugger_experimental'
 
-require 'potato_debugger'
+require_relative '../lib/experimental'

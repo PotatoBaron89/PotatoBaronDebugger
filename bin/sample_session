@@ -4,6 +4,6 @@
 # (C)Samue O'Donnell
 # MIT license
 
-$0 = 'potato_debugger'
+# $0 = 'potato_debugger'
 
 require_relative '../scratch'

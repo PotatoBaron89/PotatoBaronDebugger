@@ -32,5 +32,8 @@ DESC
   s.require_paths = ["lib"]
   s.files = `git ls-files bin lib *.md LICENSE`.split("\n")
 
+  s.add_dependency 'pry', '~> 0.14.1'
+  s.add_dependency 'awesome_print', '~> 1.9', '>= 1.9.2'
+
   s.metadata['changelog_uri'] = 'https://github.com/PotatoBaron89/PotatoBaronDebugger/blob/masterCHANGELOG.md'
 end
